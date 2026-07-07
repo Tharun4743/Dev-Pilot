@@ -1,7 +1,16 @@
-# Use official lightweight Python image
-FROM python:3.11-slim
+# ── Stage 1: Frontend Builder ──
+FROM node:20-slim AS frontend-builder
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+RUN npm run build
 
-# Install system dependencies (build-essential, gcc, g++, default-jdk, curl)
+# ── Stage 2: Runtime Runner ──
+FROM python:3.11-slim
+WORKDIR /app
+
+# Install system compilers and runtimes
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     gcc \
@@ -13,18 +22,18 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-# Set working directory
-WORKDIR /app
-
-# Install Python dependencies
+# Copy python backend requirements
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy server code
+# Copy built frontend assets from builder stage
+COPY --from=frontend-builder /app/dist ./dist
+
+# Copy backend code
 COPY server/ ./server/
 
 # Expose port
 EXPOSE 8000
 
-# Start uvicorn server
+# Start unified server
 CMD ["uvicorn", "server.app.main:app", "--host", "0.0.0.0", "--port", "8000"]
