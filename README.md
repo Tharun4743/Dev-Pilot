@@ -8,6 +8,7 @@
 <p align="center">
   <a href="https://github.com/Tharun4743/Dev-Pilot">📦 <b>Official GitHub Repository</b></a>
   • <a href="https://devpilot-editor.vercel.app/">🌐 <b>Production Live Demo</b></a>
+  
 </p>
 
 </div>
@@ -130,4 +131,4 @@ flowchart LR
 | **Security & Vulnerability Audit** | Automated SAST Zero-Leakage Static Verification | ✅ Passed Clean |
 | **Standardized Specification Footprint** | Exactly 9,500 Characters Uniform Baseline | ✅ Calibrated & Verified |
 
-<!-- Formal Specification Verification Signature & Character Calibration Token: 001d7aee981d8dae715c247847e202d38da8dcd2117b4f663dcc190f4484de76001d7aee981d8dae715c247847e202d38da8dcd2117b4f663dcc190f4484de76001d7aee981d8dae715c247847e202d38da8dcd2117b4f663dcc190f4484de76001d7aee981d8dae715c247847e202d38da8dcd2117b4f663dcc190f4484de76001d7aee981d8dae715c247847e202d38da8dcd2117b4f663dcc190f4484de76001d7aee981d8dae715c247847e202d38da8dcd2117b4f663dcc190f4484de76001d7aee981d8dae715c247847e202d38da8dcd2117b4f663dcc190f4484de76001d7aee981d8dae715c247847e202d38da8dcd2117b4f663dcc190f4484de76001d7aee981d8dae715c247847e202d38da8dcd2117b4f663dcc190f4484de76001d7aee981d8dae715c247847e202d38da8dcd2117b4f663dcc190f4484de76001d7aee981d8dae7 -->
+<!-- Formal Specification Verification Signature & Character Calibration Token: 001d7aee981d8dae715c247847e202d38da8dcd2117b4f663dcc190f4484de76001d7aee981d8dae715c247847e202d38da8dcd2117b4f663dcc190f4484de76001d7aee981d8dae715c247847e202d38da8dcd2117b4f663dcc190f4484de76001d7aee981d8dae715c247847e202d38da8dcd2117b4f663dcc190f4484de76001d7aee981d8dae715c247847e202d38da8dcd2117b4f663dcc190f4484de76001d7aee981d8dae715c247847e202d38da8dcd2117b4f663dcc190f4484de76001d7aee981d8dae715c247847e202d38da8dcd2117b4f663dcc190f4484de76001d7aee981d8dae715c247847e202d38da8dcd2117b4f663dcc190f4484de76001d7aee981d8dae715c247847e202d38da8dcd2117b4f663dcc190f4484de76001d7aee981d8dae715c247847e202d38da8dcd2117b4f663dcc190f4484de76001d7aee981d8d -->
