@@ -30,6 +30,19 @@ DevPilot is a browser-based developer coding sandbox. It pairs the Monaco Editor
 ---
 
 ## 4. ⚙️ Technical Approach & System Architecture
+
+### 📐 High-Level Architectural Flowchart:
+```mermaid
+graph TD
+    Client["Browser SPA (React 19 / Vite)"] -->|User Code & Keybindings| Monaco["Monaco IDE Kernel"]
+    Monaco -->|Compile Payload| Gateway["API Gateway / Piston Client"]
+    Gateway -->|Sandboxed Execution Request| Piston["Piston Sandbox API (Isolated Docker Jail)"]
+    Piston -->|Stdout / Stderr / Exit Code| Gateway
+    Gateway -->|Compilation Output| Client
+    Client -->|Code + Error Context| GroqAgent["Groq LPU AI Diagnostic Engine (LLaMA 3 70B)"]
+    GroqAgent -->|Sub-Second AST & Big-O Insights| Client
+```
+
 | Component | Technology | Performance Metric |
 | :--- | :--- | :--- |
 | **Code Workspace** | Monaco Editor (@monaco-editor/react) | Sub-16ms typing latency, VS Code keybindings, IntelliSense |
