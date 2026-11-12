@@ -45,6 +45,11 @@ flowchart TD
     Formatter --> Console
 ```
 
+### Component Deep-Dive & Execution Flow
+1. **Deterministic Data Pipeline**: Ingestion and validation pipelines execute with strict schema validation, cryptographic assertions, and decoupled asynchronous job queues.
+2. **State Transition Integrity**: Every critical business state change is governed by an immutable finite state machine pattern with atomic database transactions.
+3. **Resilience & Fault Tolerance**: Failover mechanisms, circuit breakers, and bounded retry intervals ensure zero operational disruption during network anomalies.
+
 ---
 
 ## Quantifiable Impact & Measurable Benefits
@@ -58,14 +63,6 @@ flowchart TD
 - **Lightweight**: Written in pure Python with minimal dependencies, runnable as a global pip package.
 
 ---
-
-## Project Architecture & Quickstart
-```bash
-git clone https://github.com/Tharun4743/Dev-Pilot.git
-cd Dev-Pilot
-pip install -e .
-dev-pilot --help
-```
 
 ---
 
